@@ -1,0 +1,19 @@
+@(message: String, entryForm: play.data.Form[forms.EntryForm])
+
+@main("Welcome to Play") {
+
+    @helper.form(action = routes.Application.addEntry()) {
+
+        <form>
+            <div class="controls">
+
+                @helper.inputText(entryForm("contents"))
+
+                <input type="submit" class="btn btn-primary"/>
+            </div>
+        </form>
+
+
+    }
+
+}
